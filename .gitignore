@@ -1,0 +1,22 @@
+# Environment variables
+*.env
+
+# Backups and large archives
+*.zip
+*.rar
+*.sql
+!data/yemek_projesi_db.sql
+
+# Logs
+*.txt
+mail_log.txt
+
+# Temp files
+tempCodeRunnerFile.php
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE files
+.vscode/

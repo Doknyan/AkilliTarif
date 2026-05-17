@@ -1,0 +1,423 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fcfcfc;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(22, 22, 22, 0.94),rgba(0,0,0,0.5), rgba(1, 1, 1, 1)), url('../img/bg/slide1.avif') no-repeat; 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.navbar-brand { font-size: 1.5rem; letter-spacing: 1px; }
+
+.footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-social-link:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.footer-social-icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.dual-range {
+    --slider-track-height: 8px;
+    --slider-track-color: #ddd;
+    --slider-active-color: #555;
+    height: 32px;
+    position: relative;
+}
+
+.dual-range .slider-track {
+    width: 100%;
+    height: var(--slider-track-height);
+    background: var(--slider-track-color);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+    border-radius: 999px;
+}
+
+.dual-range .form-range {
+    width: 100%;
+    margin: 0;
+    background: transparent;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translateY(-50%);
+}
+
+.dual-range .form-range::-webkit-slider-runnable-track {
+    height: var(--slider-track-height);
+    background: transparent;
+    border-color: transparent;
+}
+
+.dual-range .form-range::-moz-range-track,
+.dual-range .form-range::-moz-range-progress {
+    height: var(--slider-track-height);
+    background: transparent;
+    border-color: transparent;
+}
+
+.dual-range .form-range::-webkit-slider-thumb {
+    pointer-events: auto;
+    background: #ffc107;
+    border: 2px solid #555;
+    position: relative;
+    z-index: 3;
+}
+
+.dual-range .form-range::-moz-range-thumb {
+    pointer-events: auto;
+    background: #ffc107;
+    border: 2px solid #555;
+    position: relative;
+    z-index: 3;
+}
+
+.site-navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+    background: rgba(22, 22, 22, 0.94) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.site-navbar .container {
+    min-height: 42px;
+}
+
+.site-navbar .navbar-brand {
+    font-size: 1.05rem;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+}
+
+.site-navbar .nav-link {
+    font-size: 0.92rem;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+}
+
+.site-navbar .btn {
+    font-size: 0.875rem;
+    line-height: 1.2;
+    padding: 0.3rem 0.65rem;
+}
+
+.site-navbar .navbar-toggler {
+    font-size: 0.9rem;
+    padding: 0.15rem 0.4rem;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    font-weight: 600;
+}
+
+.hero-slide {
+    /* border-top: #ffc107 4px solid; */
+    border-radius: 0 ;
+    height: 450px;
+
+}
+
+.hero-slide img {
+    border-radius: 0;
+    height: 100%;
+    object-fit: cover; /* Görselin bozulmadan alanı kaplamasını sağlar */
+}
+
+.carousel-caption {
+    bottom: 10%;
+    left: 10%;
+    right: auto;
+    max-width: 500px;
+}
+
+.b0tdenetle {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
+}
+
+body.add-recipe-page {
+    min-height: 100vh;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.5)),
+        url('../img/bg/add_recipe.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.add-recipe-page .card {
+    background-color: rgba(255, 255, 255, 0.90);
+}
+body.my-kitchen-page {
+    min-height: 100vh;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.5)),
+        url('../img/bg/buzdolabi.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.my-kitchen-page .card {
+    background-color: rgba(255, 255, 255, 0.90);
+}
+
+.kitchen-add-form {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(140px, 0.8fr) minmax(150px, 0.8fr) auto;
+    gap: 1rem;
+    align-items: end;
+}
+
+.kitchen-add-actions {
+    display: flex;
+    align-items: end;
+}
+
+.recipe-upload-dropzone {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: 150px;
+    padding: 1.25rem;
+    border: 2px dashed #ced4da;
+    border-radius: 12px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-upload-dropzone.is-dragover {
+    border-color: #ffc107;
+    background-color: #fff8e1;
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.18);
+}
+
+.recipe-upload-copy {
+    display: grid;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.recipe-upload-copy span {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.recipe-upload-preview {
+    width: 120px;
+    height: 96px;
+    flex: 0 0 120px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #e9ecef;
+}
+
+.recipe-upload-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipe-ingredients-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.recipe-ingredient-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(120px, 0.7fr) auto auto;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.recipe-ingredient-unit {
+    min-width: 54px;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 576px) {
+    .kitchen-add-form {
+        grid-template-columns: 1fr;
+    }
+
+    .kitchen-add-actions .btn {
+        width: 100%;
+    }
+
+    .recipe-ingredient-row {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-ingredient-unit {
+        min-width: 0;
+    }
+
+    .recipe-upload-dropzone {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .recipe-upload-preview {
+        width: 100%;
+        height: 180px;
+        flex-basis: auto;
+    }
+}
+
+/* Auth Sayfası Arka Planı */
+body.auth-page {
+    min-height: 100vh;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('../img/bg/userbg.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.auth-page .navbar {
+    background: rgba(0, 0, 0, 0.8) !important;
+}
+
+body.auth-page .card {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+/* Profil Sayfası Arka Planı */
+body.profile-page {
+    min-height: 100vh;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+        url('../img/bg/profil.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.profile-page .card {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+body.favorites-page {
+    min-height: 100vh;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+        url('../img/bg/fav.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.favorites-page .card {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+body.my-recipes-page {
+    min-height: 100vh;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+        url('../img/bg/myrecipe.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.my-recipes-page .card {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 2.5rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    line-height: 1;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+    color: #ffc107;
+}
+
+.star-rating-text {
+    margin-left: 10px;
+    font-weight: 600;
+    color: #6c757d;
+    align-self: center;
+}
